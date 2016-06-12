@@ -2,71 +2,131 @@
 
 #This is the first version on 6.12 2016
 
+
+
+名词列表···············································
 Powershell    #不是cmd!  Terminal的一种
 Notpad++      #text editor  我在使用的文本编辑器
 directory     #目录 same as directory
-print         #"打印" 显示制定内容
+module       #模块 被import使得脚本具有某种功能
 script        #脚本 一种纯文本保存程序
-^             #下箭头（键盘无法输入） 出现在错误提示中，指出问题位置
-syntax error  #语法错误 出现在错误提示中
-#             #orctothorpe 以它开头表示注释
+global variable #全局变量 在函数语句外的就是全局变量
+decimal      #十进制
+hex          #十六进制
+octal        #八进制
+binary       #二进制
 invalid       #无效的
-# -*- coding: utf-8 -*- #在文件中使用中文字符时
 comment       #注释 用来解释代码功能/使代码失效
-
-math symbols （数学运算符号）
-+   plus
--   minus
-*   asterisk
-/   slash              整除 符号前后数字带"."时为浮点运算
-=   equal              赋值于/变量命名为
-==  double-equal       等于
-%   percent            取余
-<   less-than
->   greater-than
-<=  less-than-equal
->=  greater-than-equal
-
 variable      #变量 name for sth
-_             #下划线（underscore character） 分隔变量名中的单词
 floating point#浮点 number with decimal point
 format string #字符串
-"             #double-quotes 使内容成为字符串
-
-Python format list （格式列表）
-
-%%    百分号标记
-%c    字符及其ASCII码
-%r    根据变量格式确定输出
-%s    字符串
-%d    有符号整数(十进制)
-%u    无符号整数(十进制)
-%o    无符号整数(八进制)
-%x    无符号整数(十六进制)
-%X    无符号整数(十六进制大写字符)
-%e    浮点数字(科学计数法)%E浮点数字(科学计数法，用E代替e)
-%f    浮点数字(用小数点符号)
-%g    浮点数字(根据值的大小采用%e或%f)
-%G    浮点数字(类似于%g)
-%p    指针(用十六进制打印值的内存地址)
-%n    存储输出字符的数量放进参数列表的下一个变量中
-
 round      #四舍五入
+························································
+
+
+
+python语法··············································
+print         #"打印" 显示制定内容
+syntax error  #语法错误 出现在错误提示中
+# -*- coding: utf-8 -*- #在文件中使用中文字符时
+def           #定义函数  function_name ():
+*args         #like argv but for functions 位于（）内
+u'...'       #...为Unicode 需要用%s读取
+pydoc...     #查询python documents
+argv         #argument variable 含参数的变量
+
+^             #下箭头（键盘无法输入） 出现在错误提示中，指出问题位置
+#             #orctothorpe 以它开头表示注释
+_             #下划线（underscore character） 分隔变量名中的单词
+"             #double-quotes 使内容成为字符串
 \          #backslash 转译（escape）
 """        #triple-quotes 多行string
+························································
 
-\\	         Backslash (\)
-\'	         Single-quote (')
-\"	         Double-quote (")
-\a	         ASCII bell (BEL) 响铃
-\b	         ASCII backspace (BS) 退格
-\f	         ASCII formfeed (FF) 换页
-\n	         ASCII linefeed (LF) 换行
-\N{name}	   Character named name in the Unicode database (Unicode only)
-\r	         Carriage Return (CR) 回车
-\t	         Horizontal Tab (TAB) 水平制表符
-\uxxxx	     Character with 16-bit hex value xxxx (Unicode only)  
-\Uxxxxxxxx	 Character with 32-bit hex value xxxxxxxx (Unicode only)
-\v	         ASCII vertical tab (VT)
-\ooo	       Character with octal value ooo
-\xhh	       Character with hex value hh
+
+
+powershell命令··········································
+pwd          #powershell命令 print working directory
+cd ~         #回到主目录
+mkdir xx     #新建文件夹xx
+\(windows)   #目录中文件夹连接符
+cd           #change directory 进入子目录
+cd ..        #退回子目录
+ls           #list out 列出目录中文件夹
+rmdir        #remove directory 移除文件夹
+pushd        #进入指定目录（可以跨多层文件夹）
+popd         #退回之前位置 与pushd对应
+new-item     #新建空白文档或文件夹
+mv           #move/rename 可以跟模式参数
+echo "..." >  #powershell中写文件
+cp           #copy cp ————.txt ————.txt
+                   cp ————.txt ————/
+                   cp -r ————/ ————/
+·························································
+
+
+
+math symbols（数学运算符号）————————————
++             plus
+-             minus
+*             asterisk
+/             slash              整除 符号前后数字带"."时为浮点运算
+=             equal              赋值于/变量命名为
+==            double-equal       等于
+%             percent            取余
+<             less-than
+>             greater-than
+<=            less-than-equal
+>=            greater-than-equal
+
+
+Python format list （格式列表）————————————
+
+%%            百分号标记
+%c            字符及其ASCII码
+%r            根据变量格式确定输出
+%s            字符串
+%d            有符号整数(十进制)
+%u            无符号整数(十进制)
+%o            无符号整数(八进制)
+%x            无符号整数(十六进制)
+%X            无符号整数(十六进制大写字符)
+%e            浮点数字(科学计数法)%E浮点数字(科学计数法，用E代替e)
+%f            浮点数字(用小数点符号)
+%g            浮点数字(根据值的大小采用%e或%f)
+%G            浮点数字(类似于%g)
+%p            指针(用十六进制打印值的内存地址)
+%n            存储输出字符的数量放进参数列表的下一个变量中
+
+
+Escape Sequences（转义序列）————————————
+\\	          Backslash (\)
+\'	          Single-quote (')
+\"	          Double-quote (")
+\a	          ASCII bell (BEL) 响铃
+\b	          ASCII backspace (BS) 退格
+\f	          ASCII formfeed (FF) 换页
+\n	          ASCII linefeed (LF) 换行
+\N{name}	    Character named name in the Unicode database (Unicode only)
+\r	          Carriage Return (CR) 回车
+\t	          Horizontal Tab (TAB) 水平制表符
+\uxxxx	      Character with 16-bit hex value xxxx (Unicode only)  
+\Uxxxxxxxx	  Character with 32-bit hex value xxxxxxxx (Unicode only)
+\v	          ASCII vertical tab (VT)
+\ooo	        Character with octal value ooo
+\xhh	        Character with hex value hh
+
+
+
+处理文件命令（文件变量.command）————————————
+close         关闭文件 相当于保存文件
+read          读取文件内容，可以存入变量
+readline      读取一行内容
+truncate      清空
+write('...')  写入'...'
+exits         存在命令 判断文件是否存在 回复True或者False
+more          display file here powershell中用于显示一页内容
+cat           display file here powershell中显示文件全部内容
+rm            remove files
+rmdir         remove dir without files
+rm -r         remove dir with files
