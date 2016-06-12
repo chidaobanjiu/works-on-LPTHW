@@ -1,2 +1,3 @@
 # works-on-LPTHW
-works on learn python the hard way
+These are my own works on Learn Python The Hard Way
+Just have them in record
