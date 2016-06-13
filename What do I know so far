@@ -5,64 +5,73 @@
 
 
 名词列表···············································
-Powershell    #不是cmd!  Terminal的一种
-Notpad++      #text editor  我在使用的文本编辑器
-directory     #目录 same as directory
-module       #模块 被import使得脚本具有某种功能
-script        #脚本 一种纯文本保存程序
-global variable #全局变量 在函数语句外的就是全局变量
-decimal      #十进制
-hex          #十六进制
-octal        #八进制
-binary       #二进制
-invalid       #无效的
-comment       #注释 用来解释代码功能/使代码失效
-variable      #变量 name for sth
-floating point#浮点 number with decimal point
-format string #字符串
-round      #四舍五入
+Powershell              #不是cmd!  Terminal的一种
+Notpad++                #text editor  我在使用的文本编辑器
+directory               #目录 same as directory
+module                  #模块 被import使得脚本具有某种功能
+script                  #脚本 一种纯文本保存程序
+global variable         #全局变量 在函数语句外的就是全局变量
+decimal                 #十进制
+hex                     #十六进制
+octal                   #八进制
+binary                  #二进制
+invalid                 #无效的
+comment                 #注释 用来解释代码功能/使代码失效
+variable                #变量 name for sth
+floating point          #浮点 number with decimal point
+format string           #字符串
+round                   #四舍五入
+boolean                 #布尔值 为True或者False
 ························································
 
 
 
 python语法··············································
-print          #"打印" 显示制定内容
-syntax error   #语法错误 出现在错误提示中
-# -*- coding:  utf-8 -*- #在文件中使用中文字符时
-def            #定义函数  function_name ():
-*args          #like argv but for functions 位于（）内
-u'...'         #...为Unicode 需要用%s读取
-pydoc...       #查询python documents
-argv           #argument variable 含参数的变量
-^              #下箭头（键盘无法输入） 出现在错误提示中，指出问题位置
-#              #orctothorpe 以它开头表示注释
-_              #下划线（underscore character） 分隔变量名中的单词
-"              #double-quotes 使内容成为字符串
-\              #backslash 转译（escape）
-"""            #triple-quotes 多行string 在函数中为documentation comments
-                在函数中为documentation comments 格式为"""....."""
-split(' ')     #把字符串中的字符根据' '（空格）进行分割成为多个字符串
-sorted()       #对字符串进行排序，规则为首字母a,b,c....然后第二字母a,b,c....
-list.pop()     #截取列表中的项 list.pop(0)——截取第一项 list.pop(-1)——截取最后一项
+print                   #"打印" 显示制定内容
+syntax error            #语法错误 出现在错误提示中
+# -*- coding: utf-8 -*- #在文件中使用中文字符时
+def                     #定义函数  function_name ():
+*args                   #like argv but for functions 位于（）内
+u'...'                  #...为Unicode 需要用%s读取
+pydoc...                #查询python documents
+argv                    #argument variable 含参数的变量
+split(' ')              #把字符串中的字符根据' '（空格）进行分割成为多个字符串
+sorted()                #对字符串进行排序，规则为首字母a,b,c....然后第二字母a,b,c....
+list.pop()              #截取列表中的项 list.pop(0)——截取第一项 list.pop(-1)——截取最后一项
 ························································
 
 
 
+symbols（符号）·········································
+^                       #下箭头（键盘无法输入） 出现在错误提示中，指出问题位置
+#                       #orctothorpe 以它开头表示注释
+_                       #下划线（underscore character） 分隔变量名中的单词
+"                       #double-quotes 使内容成为字符串
+\                       #backslash 转译（escape）
+"""                     #triple-quotes 多行string 在函数中为documentation comments
+                         在函数中为documentation comments 格式为"""....."""
++=                      # a+=3 —————— a=a+3
+:                       #colon  Python expects you to indent something after you end a line with a :
+························································
+
+
+
+
 powershell命令··········································
-pwd          #powershell命令 print working directory
-cd ~         #回到主目录
-mkdir xx     #新建文件夹xx
-\(windows)   #目录中文件夹连接符
-cd           #change directory 进入子目录
-cd ..        #退回子目录
-ls           #list out 列出目录中文件夹
-rmdir        #remove directory 移除文件夹
-pushd        #进入指定目录（可以跨多层文件夹）
-popd         #退回之前位置 与pushd对应
-new-item     #新建空白文档或文件夹
-mv           #move/rename 可以跟模式参数
-echo "..." >  #powershell中写文件
-cp           #copy cp ————.txt ————.txt
+pwd           powershell命令 print working directory
+cd ~          回到主目录
+mkdir xx      新建文件夹xx
+\(windows)    目录中文件夹连接符
+cd            change directory 进入子目录
+cd ..         退回子目录
+ls            list out 列出目录中文件夹
+rmdir         remove directory 移除文件夹
+pushd         进入指定目录（可以跨多层文件夹）
+popd          退回之前位置 与pushd对应
+new-item      新建空白文档或文件夹
+mv            move/rename 可以跟模式参数
+echo "..." >  powershell中写文件
+cp            copy cp ————.txt ————.txt
                    cp ————.txt ————/
                    cp -r ————/ ————/
 ·························································
