@@ -1,0 +1,3 @@
+unindent does not match any outer indentation level    将该行代码前空格删除再缩进
+SyntaxError: Non-ASCII character '\xef' in file ex35.py on line 48   输入了中文或中文符号（通常为后者）
+unexpected indent    此处不该缩进 可能为该行问题，或者上一行非需要缩进代码如非 if else ....
