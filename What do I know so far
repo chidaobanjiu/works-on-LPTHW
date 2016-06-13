@@ -40,7 +40,8 @@ argv         #argument variable 含参数的变量
 _             #下划线（underscore character） 分隔变量名中的单词
 "             #double-quotes 使内容成为字符串
 \          #backslash 转译（escape）
-"""        #triple-quotes 多行string
+"""        #triple-quotes 多行string 在函数中为documentation comments
+            在函数中为documentation comments 格式为"""....."""
 ························································
 
 
