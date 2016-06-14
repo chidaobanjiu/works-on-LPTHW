@@ -38,8 +38,8 @@ pydoc...                #查询python documents
 argv                    #argument variable 含参数的变量
 split(' ')              #把字符串中的字符根据' '（空格）进行分割成为多个字符串
 sorted()                #对字符串进行排序，规则为首字母a,b,c....然后第二字母a,b,c....
-list.pop()              #截取列表中的项 list.pop(0)——截取第一项 list.pop(-1)——截取最后一项
-list.append()           #把..加入list末尾
+list.pop()              #截取列表中的项 list.pop(0)——截取第一项 list.pop(-1)——截取最后一项 (是一种列表方法)
+list.append()           #把..加入list末尾(是一种列表方法)
 while True              #无限循环
 
 ························································
