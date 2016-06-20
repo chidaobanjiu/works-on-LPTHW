@@ -23,6 +23,9 @@ format string           #字符串
 round                   #四舍五入
 boolean                 #布尔值 为True或者False
 loop                    #循环
+class                   #A class is a way to take a grouping of 
+                         functions and data and place them inside a container 
+                         so you can access them with the . (dot) operator.
 ························································
 
 
