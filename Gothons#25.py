@@ -34,7 +34,7 @@ class Death(Scene):
 	]
 	
 	def enter(self):
-		print Death.quips[randint(0, len(self.quips)-1)]
+		print Death.quits[randint(0, len(self.quits)-1)]
 		exit(1)
 		
 		
@@ -106,7 +106,7 @@ class LaserWeaponArmony(Scene):
 			guesses += 1
 			guess = raw_input("[keypad]>")
 			
-		if guess = code:
+		if guess == code:
 			print "The container clicks open and the seal breaks, letting gas out."
 			print "You grab the neutron bomb and run as fast as you can to the"
 			print "bridge where you must place it in the right spot."
@@ -120,7 +120,7 @@ class LaserWeaponArmony(Scene):
 			
 			
 		
-class TheBrige(Scene):
+class TheBridge(Scene):
 
 	def enter(self):
 		print "You burst onto the Bridge with the netron destruct bomb"
@@ -139,8 +139,8 @@ class TheBrige(Scene):
 			print "As you die you see another Gothon frantically try to disarm"
 			print "the bomb. You die knowing they will probably blow up when"
 			print "it goes off."
-			return 'death
-			
+			return 'death'
+
 		elif action == "slowly place the bomb":
 			print "You point your blaster at the bomb under your arm"
 			print "and the Gothons put their hands up and start to sweat."
@@ -161,32 +161,32 @@ class EscapePod(Scene):
     
 	def enter(self):
 		print "You rush through the ship desperately trying to make it to"
-        print "the escape pod before the whole ship explodes.  It seems like"
-        print "hardly any Gothons are on the ship, so your run is clear of"
-        print "interference.  You get to the chamber with the escape pods, and"
-        print "now need to pick one to take.  Some of them could be damaged"
-        print "but you don't have time to look.  There's 5 pods, which one"
-        print "do you take?"
+		print "the escape pod before the whole ship explodes.  It seems like"
+		print "hardly any Gothons are on the ship, so your run is clear of"
+		print "interference.  You get to the chamber with the escape pods, and"
+		print "now need to pick one to take.  Some of them could be damaged"
+		print "but you don't have time to look.  There's 5 pods, which one"
+		print "do you take?"
 
-        good_pod = randint(1,5)
-        guess = raw_input("[pod #]> ")
+		good_pod = randint(1,5)
+		guess = raw_input("[pod #]> ")
 
 
-        if int(guess) != good_pod:
-            print "You jump into pod %s and hit the eject button." % guess
-            print "The pod escapes out into the void of space, then"
-            print "implodes as the hull ruptures, crushing your body"
-            print "into jam jelly."
-            return 'death'
-        else:
-            print "You jump into pod %s and hit the eject button." % guess
-            print "The pod easily slides out into space heading to"
-            print "the planet below.  As it flies to the planet, you look"
-            print "back and see your ship implode then explode like a"
-            print "bright star, taking out the Gothon ship at the same"
-            print "time.  You won!"
-
-            return 'finished'
+		if int(guess) != good_pod:
+			print "You jump into pod %s and hit the eject button." % guess
+			print "The pod escapes out into the void of space, then"
+			print "implodes as the hull ruptures, crushing your body"
+			print "into jam jelly."
+			return 'death'
+		
+		else:
+			print "You jump into pod %s and hit the eject button." % guess
+			print "The pod easily slides out into space heading to"
+			print "the planet below.  As it flies to the planet, you look"
+			print "back and see your ship implode then explode like a"
+			print "bright star, taking out the Gothon ship at the same"
+			print "time.  You won!"
+			return 'finished'
 
 class Finished(Scene):
 	
@@ -198,7 +198,7 @@ class Map(object):
 
 	scenes = {
 		'central_corridor': CentralCorridor(),
-        'laser_weapon_armory': LaserWeaponArmory(),
+        'laser_weapon_armory': LaserWeaponArmony(),
         'the_bridge': TheBridge(),
         'escape_pod': EscapePod(),
         'death': Death(),
@@ -218,4 +218,3 @@ class Map(object):
 a_map = Map('central_corridor')
 a_game = Engine(a_map)
 a_game.play()
-
